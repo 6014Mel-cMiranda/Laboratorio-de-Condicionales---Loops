@@ -1,0 +1,18 @@
+# Laboratorio-de-Condicionales---Loops
+Laboratorio de Condicionales - Loops
+//Alumna:Mel-c Miranda Chón
+//Fecha:13/02/2023
+//Realice una cuadrícula de 16x16 cada cuadro de distinto color
+void setup(){
+ size(400, 400);
+ background(255);
+ int gridSize = 16;
+ int cellSize = width/gridSize; 
+ noStroke();  
+ for (int x = 0; x < gridSize; x++) {
+ for (int y = 0; y < gridSize; y++) {
+ fill(random(255), random(255), random(255));
+ rect(x*cellSize, y*cellSize, cellSize, cellSize);
+  }
+ }
+}
