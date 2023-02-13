@@ -1,0 +1,52 @@
+# Laboratorio-de-Condicionales---Loops
+Laboratorio de Condicionales - Loops
+//Alumna:Mel-c Miranda Chón
+//Fecha:10/02/2023
+int x, y;
+int fig;
+void setup() {
+  size(400, 400);
+  x = width / 2;
+  y = height / 2;
+  fig = 0;
+}
+void draw() {
+  if (keyPressed) {
+    if (key == 'b') {
+      background(255);
+      fill(255);
+      ellipse(x, y, 100, 100);
+      fig = 0;
+      
+    } else if (key == 'r') {
+      background(255);
+      fill(255);
+      rect(x - 50, y - 25, 100, 50);
+      fig = 1;
+    } else if (key == 'a') {
+      background(255);
+      fill(random(255), random(255), random(255));
+      fig = (int) random(2);
+      if (fig == 0) {
+        ellipse(x, y, 100, 100);
+      } else {
+        rect(x - 50, y - 25, 100, 50);
+      }//aqui termina la a
+    } else if (key == CODED) {
+      if (keyCode == UP) {
+        y -= 10;
+      } else if (keyCode == DOWN) {
+        y += 10;
+      } else if (keyCode == LEFT) {
+        x -= 10;
+      } else if (keyCode == RIGHT) {
+        x += 10;
+      }
+    }
+  }
+  if (fig == 0) {
+    ellipse(x, y, 100, 100);
+  } else {
+    rect(x - 50, y - 25, 100, 50);
+  }
+}
