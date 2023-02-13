@@ -1,0 +1,41 @@
+//Alumno:Mel-c Miranda Chón
+//Fecha:10/02/2023
+
+void setup() {
+  size(600, 600);
+  background(0);
+}
+
+void draw() {
+  if (keyPressed && key == 'c') { //Circulo negro
+    fill(0);
+    stroke(255);
+    ellipse((width/2), height/2, 100, 100);
+  }
+  if (keyPressed) {//Cuadradro negro
+    if(key=='r'){
+      rectMode(CENTER);
+      fill(0);
+      stroke(255);
+      rect(width/2, height/2,100,100);
+}  else if(key=='q'){
+      rectMode(CENTER);
+      fill(random(255),random(255),random(255));
+      stroke(255);
+      rect(width/2, height/2,100,100);
+}
+  }
+  if (keyPressed) {//circulo blanco
+    if(key=='b'){
+      stroke(0);
+      background(255);
+      fill(255);
+      ellipse(width/2, height/2, 100, 100);
+  }  else if(key=='a'){//Cambio de color aleator
+      stroke(0);
+      background(255);
+      fill(random(255),random(255),random(255));
+      ellipse(width/2, height/2, 100, 100);
+  }
+}
+}
